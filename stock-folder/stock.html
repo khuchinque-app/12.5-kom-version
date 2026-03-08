@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stock Management - SAUNG ABAH</title>
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="stock.css">
+</head>
+<body>
+    <div class="banner">
+        <img src="https://i.pinimg.com/736x/12/4f/46/124f4621195fe061390e3c93647bec8b.jpg" alt="Saung Abah Banner">
+    </div>
+
+    <div class="container">
+        <div class="content-wrapper">
+            <main class="main">
+                <h2>Stock Management</h2>
+                <button class="action-btn back-btn" onclick="goBack()">Back to Main</button>
+                
+                <!-- Add Item Form -->
+                <div class="editor-container">
+                    <h3>Add New Item</h3>
+                    <input id="itemName" type="text" placeholder="Item Name (e.g., Rice)">
+                    <input id="itemQuantity" type="number" placeholder="Quantity (e.g., 50)">
+                    <input id="itemUnit" type="text" placeholder="Unit (e.g., kg)">
+                    <input id="itemThreshold" type="number" placeholder="Low Threshold (e.g., 10)">
+                    <button class="action-btn add-btn" onclick="addStockItem()">Add Item</button>
+                </div>
+
+                <!-- Search -->
+                <input id="stockSearch" type="text" placeholder="Search items..." oninput="filterStock()">
+
+                <!-- Stock Table -->
+                <table id="stockTable">
+                    <thead>
+                        <tr>
+                            <th>Item</th>
+                            <th>Quantity</th>
+                            <th>Unit</th>
+                            <th>Threshold</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody id="stockBody"></tbody>
+                </table>
+
+                <button class="action-btn export-btn" onclick="exportStockReport()">Export Stock Report</button>
+            </main>
+
+            <!-- Notes Section -->
+            <aside class="notes-section">
+                <h3>Notes</h3>
+                <textarea id="stockNotes" placeholder="Write your notes here..."></textarea>
+                <button class="action-btn save-notes-btn" onclick="saveNotes()">Save Notes</button>
+            </aside>
+        </div>
+    </div>
+
+    <script src="stock.js"></script>
+</body>
+</html>
