@@ -17,3 +17,7 @@ Thumbs.db
 
 # Zone.Identifier files (if any appear)
 *:Zone.Identifier
+database.db
+catatan-gudang/
+*.pyc
+__pycache__/
